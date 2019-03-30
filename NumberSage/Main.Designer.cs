@@ -108,7 +108,7 @@
             this.textResponse.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
             this.textResponse.Location = new System.Drawing.Point(523, 14);
             this.textResponse.Name = "textResponse";
-            this.textResponse.Size = new System.Drawing.Size(720, 737);
+            this.textResponse.Size = new System.Drawing.Size(519, 737);
             this.textResponse.TabIndex = 7;
             this.textResponse.Text = "";
             // 
@@ -133,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1255, 763);
+            this.ClientSize = new System.Drawing.Size(1054, 763);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.textResponse);
             this.Controls.Add(this.panel1);
