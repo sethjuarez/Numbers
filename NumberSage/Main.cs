@@ -24,35 +24,12 @@ namespace NumberSage
 
         private void Predict(float[] digit)
         {
-            var now = DateTime.Now;
-            Tensor<float> x = new DenseTensor<float>(digit.Length);
-
-            // normalize
-            for (int i = 0; i < digit.Length; i++)
-                x[i] = ((digit[i] / 255) - 0.1307f) / 0.3081f;
-
-            var input = new List<NamedOnnxValue>() {
-                NamedOnnxValue.CreateFromTensor("0", x)
-            };
-
-            var prediction = _session.Run(input)
-                                     .First()
-                                     .AsTensor<float>()
-                                     .ToArray();
-
-            var r = Array.IndexOf(prediction, prediction.Max());
-            var time = (DateTime.Now - now).TotalSeconds;
-
-            ShowResult(r, prediction, time, v => (float)System.Math.Exp(v));
-
+                        
         }
 
-        private InferenceSession _session = null;
-        
         private void LoadModel(string file)
         {
-            _session = new InferenceSession(file);
-            textUrl.Text = $"Model: {Path.GetFileName(file)}";            
+
         }
 
 
@@ -98,7 +75,7 @@ namespace NumberSage
             return sb.ToString();
         }
 
-        private void ShowResult(int prediction, float[] scores, double time, Func<float, float> conversion = null)
+        private void ShowResult(int prediction, float[] scores, double time, Func<double, double> conversion = null)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Scores:");

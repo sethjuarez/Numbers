@@ -32,12 +32,10 @@
             this.buttonRecognize = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelPrediction = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hostCanvas = new System.Windows.Forms.Integration.ElementHost();
             this.textResponse = new System.Windows.Forms.RichTextBox();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.panel1.SuspendLayout();
+            this.hostCanvas = new System.Windows.Forms.Integration.ElementHost();
             this.SuspendLayout();
             // 
             // textUrl
@@ -45,7 +43,7 @@
             this.textUrl.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUrl.Location = new System.Drawing.Point(16, 14);
             this.textUrl.Name = "textUrl";
-            this.textUrl.Size = new System.Drawing.Size(500, 49);
+            this.textUrl.Size = new System.Drawing.Size(507, 49);
             this.textUrl.TabIndex = 1;
             // 
             // buttonRecognize
@@ -80,25 +78,6 @@
             this.labelPrediction.Text = "0";
             this.labelPrediction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.hostCanvas);
-            this.panel1.Location = new System.Drawing.Point(16, 69);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 500);
-            this.panel1.TabIndex = 6;
-            // 
-            // hostCanvas
-            // 
-            this.hostCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hostCanvas.Location = new System.Drawing.Point(0, 0);
-            this.hostCanvas.Margin = new System.Windows.Forms.Padding(0);
-            this.hostCanvas.Name = "hostCanvas";
-            this.hostCanvas.Size = new System.Drawing.Size(498, 498);
-            this.hostCanvas.TabIndex = 0;
-            this.hostCanvas.Child = null;
-            // 
             // textResponse
             // 
             this.textResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -106,9 +85,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textResponse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textResponse.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.textResponse.Location = new System.Drawing.Point(523, 14);
+            this.textResponse.Location = new System.Drawing.Point(529, 14);
             this.textResponse.Name = "textResponse";
-            this.textResponse.Size = new System.Drawing.Size(519, 737);
+            this.textResponse.Size = new System.Drawing.Size(513, 737);
             this.textResponse.TabIndex = 7;
             this.textResponse.Text = "";
             // 
@@ -127,6 +106,15 @@
             this.openFile.FileName = "model";
             this.openFile.Filter = "ONNX Files|*.onnx|All Files|*.*";
             // 
+            // hostCanvas
+            // 
+            this.hostCanvas.Location = new System.Drawing.Point(16, 69);
+            this.hostCanvas.Name = "hostCanvas";
+            this.hostCanvas.Size = new System.Drawing.Size(507, 500);
+            this.hostCanvas.TabIndex = 9;
+            this.hostCanvas.Text = "elementHost1";
+            this.hostCanvas.Child = null;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -134,9 +122,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1054, 763);
+            this.Controls.Add(this.hostCanvas);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.textResponse);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelPrediction);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonRecognize);
@@ -144,7 +132,6 @@
             this.MinimumSize = new System.Drawing.Size(964, 547);
             this.Name = "Main";
             this.Text = "Number  Sage";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,11 +142,10 @@
         private System.Windows.Forms.Button buttonRecognize;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label labelPrediction;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox textResponse;
         private System.Windows.Forms.Button buttonLoad;
-        private System.Windows.Forms.Integration.ElementHost hostCanvas;
         private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.Integration.ElementHost hostCanvas;
     }
 }
 
