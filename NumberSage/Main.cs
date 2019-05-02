@@ -10,6 +10,7 @@ using Microsoft.ML.OnnxRuntime;
 using System.Numerics.Tensors;
 using System.Collections.Generic;
 using System.Linq;
+using static System.Math;
 
 namespace NumberSage
 {
@@ -24,12 +25,22 @@ namespace NumberSage
 
         private void Predict(float[] digit)
         {
-                        
+            var x = new DenseTensor<float>(digit.Length);
+            for (int i = 0; i < digit.Length; i++)
+                x[i] = ((digit[i] / 255) - 0.1307f) / 0.3081f;
+
+            var input = NamedOnnxValue.CreateFromTensor<float>("0", x);
+
+            var output = _session.Run(new[] { input }).First().AsTensor<float>().ToArray();
+            var pred = Array.IndexOf(output, output.Max());
+            ShowResult(pred, output, 0, Exp);
         }
 
+        private InferenceSession _session;
         private void LoadModel(string file)
         {
-
+            _session = new InferenceSession(file);
+            textUrl.Text = "LOADED!";
         }
 
 

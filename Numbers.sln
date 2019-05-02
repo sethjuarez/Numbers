@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberSage", "NumberSage\NumberSage.csproj", "{7F793065-BA30-4EC9-A932-7A0AE7D3457B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Numbers", "Numbers\Numbers.pyproj", "{13EF57AE-3A11-4874-91A6-93D4CA8C2DEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7F793065-BA30-4EC9-A932-7A0AE7D3457B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F793065-BA30-4EC9-A932-7A0AE7D3457B}.Release|x64.ActiveCfg = Release|x64
 		{7F793065-BA30-4EC9-A932-7A0AE7D3457B}.Release|x64.Build.0 = Release|x64
+		{13EF57AE-3A11-4874-91A6-93D4CA8C2DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EF57AE-3A11-4874-91A6-93D4CA8C2DEF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{13EF57AE-3A11-4874-91A6-93D4CA8C2DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EF57AE-3A11-4874-91A6-93D4CA8C2DEF}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
